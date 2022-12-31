@@ -16,7 +16,9 @@ const createLink = (fonts, subsets, display, text) => {
 
   link.rel = 'stylesheet'
   link.href = `https://fonts.googleapis.com/css?family=${families}`
-
+  link.crossOrigin = 'anonymous';
+  link.type = 'text/css';
+  
   if (text) {
     link.href += `&text=${encodeURIComponent(text)}`
   }
